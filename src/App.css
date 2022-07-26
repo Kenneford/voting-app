@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.appWrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.partyCard{
+    max-width: 370px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  margin: 10px 20px;
 }
-
-.App-link {
-  color: #61dafb;
+.cardWrap{
+    background: #e6e6e6;
+    padding: 10px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.voteCountWrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    padding: 30px 150px 0;
+}
+.percentageCountWrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    padding: 0px 150px 0;
+    margin-top: -15px;
+}
+.voteCount{
+    margin-bottom: 50px;
+    width: 100px;
+    text-align: center;
+}
+.percentageCount{
+    width: 100px;
+    text-align: center;
+}
+.partyName{
+  letter-spacing: 10px;
+  margin-bottom: 10px;
+}
+.slogan{
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.partyCard button{
+    padding: 5px 10px;
+    margin: 20px 2px 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+.modal{
+    position: absolute;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;justify-content: center;
+    display: none;
+}
+.modalWrap{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* font-size: calc(10px + 2vmin); */
+    color: white;
+}
+.beAware{
+    width: 370px;
+    margin: 20px 0 10px;
+    font-size: 1.2em;
+}
+.modalBtn{
+    display: flex;
+}
+.modalBtn button{
+    margin: 5px;
+    padding: 7px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+.greenBtn{
+    background: #039b03;
+    color: #fff;
+}
+.greenBtn:hover{
+    background: #03cd03;
+}
+.redBtn{
+    background: #e31818;
+    color: #fff;
+}
+.redBtn:hover{
+    background: #f84747;
+}
+.totalVotes{
+    text-align: center;
 }
