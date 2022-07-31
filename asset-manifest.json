@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/voting-app/static/css/main.6c2b3d6a.css",
+    "main.js": "/voting-app/static/js/main.4d664fc6.js",
+    "static/js/787.60798efb.chunk.js": "/voting-app/static/js/787.60798efb.chunk.js",
+    "static/media/ppp.jpg": "/voting-app/static/media/ppp.34d2d92cbeea62b328d6.jpg",
+    "static/media/npp-logo.png": "/voting-app/static/media/npp-logo.1d716206ee2f6066f8a6.png",
+    "static/media/ndc-logo.png": "/voting-app/static/media/ndc-logo.43a4b622bdd93e7977fd.png",
+    "static/media/cpp1.jpg": "/voting-app/static/media/cpp1.2a42fecafb370c0fe11f.jpg",
+    "index.html": "/voting-app/index.html",
+    "main.6c2b3d6a.css.map": "/voting-app/static/css/main.6c2b3d6a.css.map",
+    "main.4d664fc6.js.map": "/voting-app/static/js/main.4d664fc6.js.map",
+    "787.60798efb.chunk.js.map": "/voting-app/static/js/787.60798efb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6c2b3d6a.css",
+    "static/js/main.4d664fc6.js"
+  ]
+}
