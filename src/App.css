@@ -3,6 +3,9 @@
   margin: 0;
   padding: 0;
 }
+body{
+    background: #cccc;
+}
 .appWrap{
     display: flex;
     align-items: center;
@@ -10,12 +13,12 @@
 }
 .partyCard{
     max-width: 370px;
-  align-items: center;
-  text-align: center;
-  margin: 10px 20px;
+    align-items: center;
+    text-align: center;
+    margin: 10px 20px;
 }
 .cardWrap{
-    background: #e6e6e6;
+    background: #fff;
     padding: 10px;
 }
 .voteCountWrap{
@@ -50,6 +53,18 @@
     font-weight: 500;
     margin-bottom: 5px;
 }
+.partyYearwrap{
+    height: 150px;
+    background: #292929;
+    color: #fff;
+}
+.partyYearwrap h4{
+    font-weight: 300;
+}
+.yearFounded{
+    padding-top: 15px;
+    margin-bottom: 5px;
+}
 .partyCard button{
     padding: 5px 10px;
     margin: 20px 2px 5px;
@@ -57,6 +72,14 @@
     border-radius: 5px;
     font-size: 1.2em;
 }
+/* .voteBtn{
+    background: #039b03;
+    color: #fff;
+}
+.unVoteBtn{
+    background: #e31818;
+    color: #fff;
+} */
 .modal{
     position: absolute;
     text-align: center;

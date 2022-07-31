@@ -13,7 +13,7 @@ const parties = [
         slogan: "Development in Freedom",
         logo: NppLogo,
         founded: 1992,
-        leader: "Nana Addo Danquah Akufo-Addo"
+        leader: "N.A.D Akufo-Addo"
     },
     {
         id: 2,
@@ -54,16 +54,20 @@ function App() {
     
     useEffect(() =>{
         setNppPercentage( nppVoteCount / 100 * 2)
-    })
+    }, [nppVoteCount, nppPercentage])
+
     useEffect(() =>{
         setNdcPercentage( ndcVoteCount / 100 * 2)
-    })
+    }, [ndcVoteCount, ndcPercentage])
+
     useEffect(() =>{
         setPppPercentage( pppVoteCount / 100 * 2)
-    })
+    }, [pppVoteCount, pppPercentage])
+
     useEffect(() =>{
         setCppPercentage( cppVoteCount / 100 * 2)
-    })
+    }, [cppVoteCount, cppPercentage])
+
     
     return (
     <div className="App">
@@ -109,33 +113,35 @@ function App() {
                 return(
                     <div key={id} className='partyCard'>
                         <div className='cardWrap'>
-                            <h2 className='partyName'>{party.name}</h2>
+                            <h2 className='partyName'>{party.partyName}</h2>
                             <p className='slogan'>{party.slogan}</p>
                             <img src={party.logo} alt='' width="350px" height="250px" />
-                            <h4>Since: <span>{party.founded}</span></h4>
-                            <h4>Flag-bearer: <span>{party.leader}</span></h4>
-                            <button
-                            disabled={voted}
-                            onClick={() => [party.id === 1 ? setNppVoteCount(nppVoteCount + 1) :
-                                party.id === 2 ? setNdcVoteCount(ndcVoteCount + 1) :
-                                party.id === 3 ? setPppVoteCount(pppVoteCount + 1) :
-                                                setCppVoteCount(cppVoteCount + 1),
-                                                setVoted(true),
-                                            document.getElementById('modal').style.display='block']}
-                            className="voteBtn"
-                            >Vote</button>
-                            <button
-                            disabled={(party.id === 1 && nppVoteCount <= 0 ? true : false) ||
-                                      (party.id === 2 && ndcVoteCount <= 0 ? true : false) ||
-                                      (party.id === 3 && pppVoteCount <= 0 ? true : false) ||
-                                      (party.id === 4 && cppVoteCount <= 0 ? true : false)}
-                            onClick={() => [party.id === 1 ? setNppVoteCount(nppVoteCount - 1) :
-                                    party.id === 2 ? setNdcVoteCount(ndcVoteCount - 1) :
-                                    party.id === 3 ? setPppVoteCount(pppVoteCount - 1) :
-                                                    setCppVoteCount(cppVoteCount - 1),
-                                                setVoted(false),]}
-                            className="unVoteBtn"
-                            >Unvote</button>
+                            <div className='partyYearwrap'>
+                                <h4 className='yearFounded'>Since: <span>{party.founded}</span></h4>
+                                <h4>Flag-bearer: <span>{party.leader}</span></h4>
+                                <button
+                                disabled={voted}
+                                onClick={() => [party.id === 1 ? setNppVoteCount(nppVoteCount + 1) :
+                                    party.id === 2 ? setNdcVoteCount(ndcVoteCount + 1) :
+                                    party.id === 3 ? setPppVoteCount(pppVoteCount + 1) :
+                                                    setCppVoteCount(cppVoteCount + 1),
+                                                    setVoted(true),
+                                                document.getElementById('modal').style.display='block']}
+                                className="voteBtn"
+                                >Vote</button>
+                                <button
+                                disabled={(party.id === 1 && nppVoteCount <= 0 ? true : false) ||
+                                          (party.id === 2 && ndcVoteCount <= 0 ? true : false) ||
+                                          (party.id === 3 && pppVoteCount <= 0 ? true : false) ||
+                                          (party.id === 4 && cppVoteCount <= 0 ? true : false)}
+                                onClick={() => [party.id === 1 ? setNppVoteCount(nppVoteCount - 1) :
+                                        party.id === 2 ? setNdcVoteCount(ndcVoteCount - 1) :
+                                        party.id === 3 ? setPppVoteCount(pppVoteCount - 1) :
+                                                        setCppVoteCount(cppVoteCount - 1),
+                                                    setVoted(false),]}
+                                className="unVoteBtn"
+                                >Unvote</button>
+                            </div>
                         </div>
                     </div>
                 )
