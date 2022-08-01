@@ -93,9 +93,6 @@ function App() {
                     </div>
                 </div>
             </div>
-            <div className='totalVoteCount'>
-
-            </div>
             <div className='voteCountWrap'>
                 <h1 className='voteCount'>{nppVoteCount}</h1>
                 <h1 className='voteCount'>{ndcVoteCount}</h1>
@@ -103,10 +100,10 @@ function App() {
                 <h1 className='voteCount'>{cppVoteCount}</h1>
             </div>
             <div className='percentageCountWrap'>
-                <h1 className='percentageCount'>{nppPercentage}</h1>
-                <h1 className='percentageCount'>{ndcPercentage}</h1>
-                <h1 className='percentageCount'>{pppPercentage}</h1>
-                <h1 className='percentageCount'>{cppPercentage}</h1>
+                <h1 className='percentageCount'>{nppPercentage}%</h1>
+                <h1 className='percentageCount'>{ndcPercentage}%</h1>
+                <h1 className='percentageCount'>{pppPercentage}%</h1>
+                <h1 className='percentageCount'>{cppPercentage}%</h1>
             </div>
         <div className='appWrap'>
             {parties.map((party, id)=>{

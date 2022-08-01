@@ -26,24 +26,26 @@ body{
     align-items: center;
     justify-content: center;
     justify-content: space-around;
-    padding: 30px 150px 0;
+    padding: 30px 450px 0;
+}
+.voteCount{
+    margin-bottom: 50px;
+    width: 250px;
+    text-align: center;
+    margin: 10px;
 }
 .percentageCountWrap{
     display: flex;
     align-items: center;
     justify-content: center;
     justify-content: space-around;
-    padding: 0px 150px 0;
+    padding: 0px 450px 0;
     margin-top: -15px;
-}
-.voteCount{
-    margin-bottom: 50px;
-    width: 100px;
-    text-align: center;
 }
 .percentageCount{
     width: 100px;
     text-align: center;
+    margin-top: 10px;
 }
 .partyName{
   letter-spacing: 10px;
@@ -72,14 +74,29 @@ body{
     border-radius: 5px;
     font-size: 1.2em;
 }
-/* .voteBtn{
-    background: #039b03;
+.voteBtn{
+    background: #159d15;
+    color: #fff;
+}
+.voteBtn:hover{
+    background: #02c602;
+    color: #fff;
+}
+.voteBtn:disabled{
+    background: #649764;
     color: #fff;
 }
 .unVoteBtn{
-    background: #e31818;
+    background: #d92525;
     color: #fff;
-} */
+}
+.unVoteBtn:hover{
+    background: #f94242;
+}
+.unVoteBtn:disabled{
+    background: #9c5e5e;
+    color: #fff;
+}
 .modal{
     position: absolute;
     text-align: center;
