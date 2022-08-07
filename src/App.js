@@ -4,7 +4,6 @@ import CppLogo from './cpp1.jpg';
 import PppLogo from './ppp.jpg';
 import './App.css';
 import React, {useState, useEffect} from 'react'
-import TotalVotes from './TotalVotes';
 
 const parties = [
     {
@@ -50,33 +49,41 @@ function App() {
     const [pppPercentage, setPppPercentage] = useState(0)
     const [cppPercentage, setCppPercentage] = useState(0)
     const [voted, setVoted] = useState(false)
+    const [totalVotes, setTotalVotes] = useState(0)
     // const [isOpen, setIsOpen] = useState(false)
-    
+    console.log(pppPercentage)
+    useEffect(()=>{
+        setTotalVotes(nppVoteCount + ndcVoteCount + pppVoteCount + cppVoteCount)
+    }, [nppVoteCount, ndcVoteCount, pppVoteCount, cppVoteCount])
+
     useEffect(() =>{
-        setNppPercentage( nppVoteCount / 100 * 2)
+        setNppPercentage( nppVoteCount / totalVotes * 100)
     }, [nppVoteCount, nppPercentage])
 
     useEffect(() =>{
-        setNdcPercentage( ndcVoteCount / 100 * 2)
+        setNdcPercentage( ndcVoteCount / totalVotes * 100)
     }, [ndcVoteCount, ndcPercentage])
 
     useEffect(() =>{
-        setPppPercentage( pppVoteCount / 100 * 2)
+        setPppPercentage( pppVoteCount / totalVotes * 100)
     }, [pppVoteCount, pppPercentage])
 
     useEffect(() =>{
-        setCppPercentage( cppVoteCount / 100 * 2)
+        setCppPercentage( cppVoteCount / totalVotes * 100)
     }, [cppVoteCount, cppPercentage])
 
     
     return (
     <div className="App">
-        <TotalVotes 
+        <div className='totalVotes'>
+            <h1>{totalVotes}</h1>
+        </div>
+        {/* <TotalVotes 
         nppVoteCount={nppVoteCount} 
         ndcVoteCount={ndcVoteCount} 
         pppVoteCount={pppVoteCount} 
         cppVoteCount={cppVoteCount} 
-        />
+        /> */}
 
             <div className='modal' id='modal'>
                 <div className='modalWrap'>
